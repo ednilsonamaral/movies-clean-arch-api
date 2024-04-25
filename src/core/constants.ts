@@ -49,6 +49,11 @@ const setConstants = () => {
     },
   };
 
+  Constants.tmdb = {
+    baseUrl: config.TMBD_API_BASE_URL,
+    token: config.TMBD_API_TOKEN,
+  }
+
 };
 
 const setLuxon = () => {

@@ -21,6 +21,11 @@ export interface IConstants {
       idle: number;
     };
   };
+
+  tmdb: {
+    baseUrl: string;
+    token: string;
+  }
 }
 
 export interface IEnvironmentSecrets {
@@ -40,4 +45,7 @@ export interface IEnvironmentSecrets {
   DATABASE_POOL_MIN: string;
   DATABASE_ACQUIRE: string;
   DATABASE_IDLE: string;
+
+  TMBD_API_BASE_URL: string;
+  TMBD_API_TOKEN: string;
 }

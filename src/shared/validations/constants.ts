@@ -17,6 +17,9 @@ const Schema = z.object({
   DATABASE_POOL_MIN: z.string().default('1'),
   DATABASE_ACQUIRE: z.string().default('10000'),
   DATABASE_IDLE: z.string().default('20000'),
+
+  TMBD_API_BASE_URL: z.string(),
+  TMBD_API_TOKEN: z.string(),
 });
 
 export default Schema;
