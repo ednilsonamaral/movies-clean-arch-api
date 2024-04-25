@@ -22,4 +22,6 @@ export const BusinessErrorCodes = {
   INTERNAL_SERVER_ERROR: 'internal_server_error',
   USER_NOT_FOUND: 'user_not_found',
   USER_ALREADY_REGISTERED: 'user_already_registered',
+  MOVIE_ALREADY_REGISTERED: 'movie_already_registered',
+  MOVIE_NOT_FOUND: 'movie_not_found',
 };

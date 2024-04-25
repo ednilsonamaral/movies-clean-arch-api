@@ -25,7 +25,8 @@
     "migration:revert": "npx typeorm migration:revert -n"
   },
   "dependencies": {
-    "axios": "^1.6.5",
+    "@types/axios": "^0.14.0",
+    "axios": "^1.6.8",
     "body-parser": "^1.20.2",
     "class-transformer": "^0.5.1",
     "compression": "^1.7.4",
