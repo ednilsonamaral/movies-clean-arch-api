@@ -1,0 +1,13 @@
+services:
+  backend-db:
+    container_name: postgres-movies-db
+    image: postgres:16
+    ports:
+      - '5432:${DATABASE_PORT}'
+    volumes:
+      - data:/data/db
+    environment:
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+      - POSTGRES_DB=${DATABASE_NAME}
+volumes:
+  data: {}

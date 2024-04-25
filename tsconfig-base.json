@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "pretty": true,
+    "sourceMap": true,
+    "target": "ES2020",
+    "lib": [
+      "ES2020",
+      "dom"
+    ],
+    "types": [
+      "node",
+      "reflect-metadata"
+    ],
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": false,
+    "baseUrl": ".",
+    "paths": {
+      "@src": [
+        "./src"
+      ],
+      "@src/*": [
+        "./src/*"
+      ],
+      "@core": [
+        "./src/core"
+      ],
+      "@core/*": [
+        "./src/core/*"
+      ],
+      "@modules": [
+        "./src/modules"
+      ],
+      "@modules/*": [
+        "./src/modules/*"
+      ],
+      "@shared": [
+        "./src/shared"
+      ],
+      "@shared/*": [
+        "./src/shared/*"
+      ],
+    },
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,1 @@
+export * from '@core/db/migrations/1704990647193-User';
