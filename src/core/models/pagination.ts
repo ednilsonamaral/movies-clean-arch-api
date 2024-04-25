@@ -19,3 +19,8 @@ export interface ISearchParameterUser extends ISearchParameterBase {
   email?: string;
   document?: string;
 }
+
+export interface ISearchParameterMovie extends ISearchParameterBase {
+  title?: string;
+  tmdbId?: number;
+}

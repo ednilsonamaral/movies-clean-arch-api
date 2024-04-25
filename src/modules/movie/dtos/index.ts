@@ -1,0 +1,1 @@
+export * from '@modules/movie/dtos/create-movie.dto';

@@ -1,15 +1,19 @@
 import { Container } from 'inversify';
 
 import {
+  IMovieRepository,
   IUserRepository,
+  MovieRepository,
   UserRepository,
 } from '@core/db/repositories';
 import Types from '@core/types';
 
 import {
+  MovieController,
   UserController,
 } from '@modules';
-import { CreateUserUseCase, DeleteUserUseCase, GetAllUsersUseCase, GetUserUseCase, ICreateUserUseCase, IDeleteUserUseCase, IGetAllUsersUseCase, IGetUserUseCase, IUpdateUserUseCase, UpdateUserUseCase } from '@src/modules/user/use-cases';
+import { CreateUserUseCase, DeleteUserUseCase, GetAllUsersUseCase, GetUserUseCase, ICreateUserUseCase, IDeleteUserUseCase, IGetAllUsersUseCase, IGetUserUseCase, IUpdateUserUseCase, UpdateUserUseCase } from '@modules/user/use-cases';
+import { GetAllMovieUseCase, GetMovieUseCase, IGetAllMovieUseCase, IGetMovieUseCase } from '@modules/movie/use-cases';
 
 const container: Container = new Container();
 
@@ -17,6 +21,9 @@ const container: Container = new Container();
 container
   .bind<IUserRepository>(Types.UserRepository)
   .to(UserRepository);
+container
+  .bind<IMovieRepository>(Types.MovieRepository)
+  .to(MovieRepository);
 
 // User UseCases
 container
@@ -35,9 +42,20 @@ container
   .bind<IDeleteUserUseCase>(Types.DeleteUserUseCase)
   .to(DeleteUserUseCase);
 
+// Movie UseCases
+container
+  .bind<IGetAllMovieUseCase>(Types.GetAllMovieUseCase)
+  .to(GetAllMovieUseCase);
+container
+  .bind<IGetMovieUseCase>(Types.GetMovieUseCase)
+  .to(GetMovieUseCase);
+  
 // Controllers
 container
   .bind(UserController)
+  .toSelf();
+container
+  .bind(MovieController)
   .toSelf();
 
 export { container };
